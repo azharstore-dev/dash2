@@ -67,12 +67,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200 [dir=rtl]:flex-row-reverse">
           <div className="flex items-center gap-3 [dir=rtl]:flex-row-reverse">
             <img
-              src={language === "ar"
-                ? "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F6b2c342f55b24cd1ab05853aa15523c9?format=webp&width=800"
-                : "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F72cfed7b1096405dbe2a7a56980b2907?format=webp&width=800"
+              src={
+                language === "ar"
+                  ? "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F6b2c342f55b24cd1ab05853aa15523c9?format=webp&width=800"
+                  : "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F72cfed7b1096405dbe2a7a56980b2907?format=webp&width=800"
               }
               alt="Azhar Store Logo"
-className="h-14 w-auto max-w-[180px] object-contain"
+              className="h-14 w-auto max-w-[180px] object-contain"
             />
           </div>
           <button
