@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useData } from "@/contexts/DataContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -67,25 +68,18 @@ interface TopPage {
 
 const Analytics = () => {
   const { language, isRTL, t } = useLanguage();
+  const { orders, customers, products } = useData();
   const [timeRange, setTimeRange] = useState("7days");
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-    visitors: 2547,
-    pageViews: 12847,
-    averageSessionDuration: 245,
-    bounceRate: 32.5,
-    newUsers: 1653,
-    returningUsers: 894,
+    visitors: 0,
+    pageViews: 0,
+    averageSessionDuration: 0,
+    bounceRate: 0,
+    newUsers: 0,
+    returningUsers: 0,
   });
 
-  const [visitorTrends, setVisitorTrends] = useState<VisitorTrend[]>([
-    { date: "2024-01-01", visitors: 245, pageViews: 1245 },
-    { date: "2024-01-02", visitors: 323, pageViews: 1567 },
-    { date: "2024-01-03", visitors: 298, pageViews: 1423 },
-    { date: "2024-01-04", visitors: 367, pageViews: 1789 },
-    { date: "2024-01-05", visitors: 445, pageViews: 2134 },
-    { date: "2024-01-06", visitors: 398, pageViews: 1923 },
-    { date: "2024-01-07", visitors: 471, pageViews: 2266 },
-  ]);
+  const [visitorTrends, setVisitorTrends] = useState<VisitorTrend[]>([]);
 
   const [deviceData, setDeviceData] = useState<DeviceData[]>([
     { device: "Mobile", visitors: 1528, percentage: 60 },
@@ -93,13 +87,7 @@ const Analytics = () => {
     { device: "Tablet", visitors: 255, percentage: 10 },
   ]);
 
-  const [topPages, setTopPages] = useState<TopPage[]>([
-    { page: "/", views: 4523, uniqueViews: 3245 },
-    { page: "/products", views: 3456, uniqueViews: 2789 },
-    { page: "/product/1", views: 2345, uniqueViews: 1987 },
-    { page: "/product/2", views: 1987, uniqueViews: 1654 },
-    { page: "/admin", views: 876, uniqueViews: 123 },
-  ]);
+  const [topPages, setTopPages] = useState<TopPage[]>([]);
 
   const colors = ["#742370", "#8b4d89", "#401951", "#5a2972", "#9d5b9a"];
 
@@ -111,8 +99,9 @@ const Analytics = () => {
       pageViews: "Page Views",
       avgSession: "Avg. Session Duration",
       bounceRate: "Bounce Rate",
-      newUsers: "New Users",
-      returningUsers: "Returning Users",
+      newUsers: "New Customers",
+      returningUsers: "Returning Customers",
+      userTypes: "Customer Types",
       visitorTrends: "Visitor Trends",
       deviceBreakdown: "Device Breakdown",
       topPages: "Top Pages",
@@ -131,8 +120,9 @@ const Analytics = () => {
       pageViews: "مشاهدات الصفحة",
       avgSession: "متوسط مدة الجلسة",
       bounceRate: "معدل الارتداد",
-      newUsers: "المستخدمين الجدد",
-      returningUsers: "المستخدمين العائدين",
+      newUsers: "العملاء الجدد",
+      returningUsers: "العملاء العائدين",
+      userTypes: "أنواع المستخدمين",
       visitorTrends: "اتجاهات الزوار",
       deviceBreakdown: "تفصيل الأجهزة",
       topPages: "أهم الصفحات",
@@ -336,7 +326,7 @@ const Analytics = () => {
         {/* User Types */}
         <Card>
           <CardHeader>
-            <CardTitle className="auto-text">User Types</CardTitle>
+            <CardTitle className="auto-text">{currentTranslations.userTypes}</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={250}>
