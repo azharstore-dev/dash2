@@ -73,12 +73,14 @@ export default function Store() {
           {/* Logo and Title */}
           <div className="flex items-center gap-3 [dir=rtl]:flex-row-reverse">
             <div className="h-20 flex items-center">
-              <div className="flex items-center gap-2">
-                <StoreIcon className="h-12 w-12 text-primary" />
-                <div className="text-xl font-bold text-primary">
-                  {t("store.title")}
-                </div>
-              </div>
+              <img
+                src={language === "ar"
+                  ? "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F72cfed7b1096405dbe2a7a56980b2907?format=webp&width=800"
+                  : "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F6b2c342f55b24cd1ab05853aa15523c9?format=webp&width=800"
+                }
+                alt="Azhar Store"
+                className="h-16 w-auto max-w-[200px] object-contain"
+              />
             </div>
           </div>
 
