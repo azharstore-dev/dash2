@@ -149,6 +149,27 @@ const translations = {
     "customers.customerTown": "Town/Area",
     "customers.save": "Save",
 
+    // Analytics
+    "analytics.title": "Analytics",
+    "analytics.overview": "Analytics Overview",
+    "analytics.visitors": "Total Visitors",
+    "analytics.pageViews": "Page Views",
+    "analytics.avgSession": "Avg. Session Duration",
+    "analytics.bounceRate": "Bounce Rate",
+    "analytics.newUsers": "New Customers",
+    "analytics.returningUsers": "Returning Customers",
+    "analytics.visitorTrends": "Visitor Trends",
+    "analytics.deviceBreakdown": "Device Breakdown",
+    "analytics.topPages": "Top Pages",
+    "analytics.views": "Views",
+    "analytics.uniqueViews": "Unique Views",
+    "analytics.minutes": "minutes",
+    "analytics.refresh": "Refresh Data",
+    "analytics.last7days": "Last 7 Days",
+    "analytics.last30days": "Last 30 Days",
+    "analytics.last90days": "Last 90 Days",
+    "analytics.userTypes": "Customer Types",
+
     // Revenue
     "revenue.title": "Revenue Analytics",
     "revenue.overview": "Revenue Overview",
@@ -294,7 +315,7 @@ const translations = {
     "dashboard.welcome": "مرحباً بك في لوحة الإدارة",
 
     // Products
-    "products.title": "المنتجا��",
+    "products.title": "المنتجات",
     "products.subtitle": "إدارة مخزون المنتجات",
     "products.addNew": "إضافة منتج جديد",
     "products.search": "البحث في المنتجات...",
@@ -381,7 +402,7 @@ const translations = {
 
     // Customers
     "customers.title": "العملاء",
-    "customers.subtitle": "إدارة قاعدة بي��نات العملاء",
+    "customers.subtitle": "إدارة قاعدة بيانات العملاء",
     "customers.addNew": "إضافة عميل جديد",
     "customers.search": "البحث في العملاء...",
     "customers.name": "الاسم",
@@ -402,6 +423,27 @@ const translations = {
     "customers.customerTown": "المنطقة:",
     "customers.save": "حفظ",
 
+    // Analytics
+    "analytics.title": "التحليلات",
+    "analytics.overview": "نظرة عامة على التحليلات",
+    "analytics.visitors": "إجمالي الزوار",
+    "analytics.pageViews": "مشاهدات الصفحة",
+    "analytics.avgSession": "متوسط مدة الجلسة",
+    "analytics.bounceRate": "معدل الارتداد",
+    "analytics.newUsers": "العملاء الجدد",
+    "analytics.returningUsers": "العملاء العائدين",
+    "analytics.visitorTrends": "اتجاهات الزوار",
+    "analytics.deviceBreakdown": "تفصيل الأجهزة",
+    "analytics.topPages": "أهم الصفحات",
+    "analytics.views": "المشاهدات",
+    "analytics.uniqueViews": "المشاهدات الفريدة",
+    "analytics.minutes": "دقائق",
+    "analytics.refresh": "تحديث البيانات",
+    "analytics.last7days": "آخر 7 أيام",
+    "analytics.last30days": "آخر 30 يوم",
+    "analytics.last90days": "آخر 90 يوم",
+    "analytics.userTypes": "أنواع العملاء",
+
     // Revenue
     "revenue.title": "تحليلات الإيرادات",
     "revenue.overview": "نظرة عامة على الإيرادات",
@@ -410,7 +452,7 @@ const translations = {
     "revenue.avgOrderValue": "متوسط قيمة الطلب",
     "revenue.monthlyTrend": "اتجاه الإيرادات الشهرية",
     "revenue.dailyRevenue": "الإيرادات اليومية (هذا الشهر)",
-    "revenue.topProducts": "أفضل المنتجات من حيث ��لإيرادات",
+    "revenue.topProducts": "أفضل المنتجات من حيث الإيرادات",
     "revenue.deliveryAnalysis": "تحليل نوع التسليم",
     "revenue.revenueByStatus": "الإيرادات حسب حالة الطلب",
     "revenue.month": "الشهر",
@@ -450,11 +492,11 @@ const translations = {
     "empty.createOrder": "إنشاء طلب",
 
     // Messages
-    "message.deleteConfirm": "هل أنت متأكد م�� حذف هذا العنصر؟",
+    "message.deleteConfirm": "هل أنت متأكد من حذف هذا العنصر؟",
     "message.productAdded": "تم إضافة المنتج بنجاح",
     "message.productUpdated": "تم تحديث المنتج بنجاح",
     "message.productDeleted": "تم حذف المنتج بنجاح",
-    "message.orderAdded": "تم إضافة الطلب بن��اح",
+    "message.orderAdded": "تم إضافة الطلب بنجاح",
     "message.orderUpdated": "تم تحديث الطلب بنجاح",
     "message.orderDeleted": "تم حذف الطلب بنجاح",
     "message.customerAdded": "تم إضافة العميل بنجاح",
@@ -515,7 +557,7 @@ const translations = {
     "checkout.orderSuccessMessage": "شكراً لك على طلبك",
     "checkout.subtotal": "المجموع الفرعي",
     "checkout.deliveryFee": "رسوم التوصيل",
-    "checkout.total": "المجموع ا��كلي",
+    "checkout.total": "المجموع الكلي",
     "checkout.orderItems": "محتويات الطلب",
     "checkout.paymentMethod": "طريقة الدفع",
     "checkout.cashOnDelivery": "الدفع عند التسليم",

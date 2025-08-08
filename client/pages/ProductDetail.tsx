@@ -102,11 +102,11 @@ export default function ProductDetail() {
               <img
                 src={
                   language === "ar"
-                    ? "https://cdn.builder.io/api/v1/image/assets%2F6cb987f4f6054cf88b5f469a13f2a67e%2F29c97beefe89426cb91fceaee3817c7a?format=webp&width=800"
-                    : "https://cdn.builder.io/api/v1/image/assets%2F6cb987f4f6054cf88b5f469a13f2a67e%2F1f3539241b034a2280e7b5e91b51eb3d?format=webp&width=800"
+                    ? "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F6b2c342f55b24cd1ab05853aa15523c9?format=webp&width=800"
+                    : "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F72cfed7b1096405dbe2a7a56980b2907?format=webp&width=800"
                 }
-                alt={t("store.title")}
-                className="h-20 w-auto object-contain"
+                alt="Azhar Store"
+                className="h-20 w-auto max-w-[280px] object-contain"
               />
             </div>
           </div>

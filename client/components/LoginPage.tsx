@@ -55,9 +55,13 @@ export default function LoginPage() {
             {/* Larger Logo */}
             <div className="mx-auto mb-6">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets/6cb987f4f6054cf88b5f469a13f2a67e/b5f4e8c2a4b64c34a9e5f8e8d3a5b9c2"
+                src={
+                  language === "ar"
+                    ? "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F6b2c342f55b24cd1ab05853aa15523c9?format=webp&width=800"
+                    : "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F72cfed7b1096405dbe2a7a56980b2907?format=webp&width=800"
+                }
                 alt="Azhar Store Logo"
-                className="h-32 w-auto mx-auto"
+                className="h-40 w-auto mx-auto max-w-[400px] object-contain"
               />
             </div>
 
