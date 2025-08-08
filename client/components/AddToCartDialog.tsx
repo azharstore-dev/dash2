@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "./ui/select";
 import { Minus, Plus } from "lucide-react";
+import { ScrollArea } from "./ui/scroll-area";
 
 interface Product {
   id: string;
