@@ -294,7 +294,7 @@ const translations = {
     "dashboard.welcome": "مرحباً بك في لوحة الإدارة",
 
     // Products
-    "products.title": "المنتجا��",
+    "products.title": "المنتجات",
     "products.subtitle": "إدارة مخزون المنتجات",
     "products.addNew": "إضافة منتج جديد",
     "products.search": "البحث في المنتجات...",
@@ -381,7 +381,7 @@ const translations = {
 
     // Customers
     "customers.title": "العملاء",
-    "customers.subtitle": "إدارة قاعدة بي��نات العملاء",
+    "customers.subtitle": "إدارة قاعدة بيانات العملاء",
     "customers.addNew": "إضافة عميل جديد",
     "customers.search": "البحث في العملاء...",
     "customers.name": "الاسم",
@@ -410,7 +410,7 @@ const translations = {
     "revenue.avgOrderValue": "متوسط قيمة الطلب",
     "revenue.monthlyTrend": "اتجاه الإيرادات الشهرية",
     "revenue.dailyRevenue": "الإيرادات اليومية (هذا الشهر)",
-    "revenue.topProducts": "أفضل المنتجات من حيث ��لإيرادات",
+    "revenue.topProducts": "أفضل المنتجات من حيث الإيرادات",
     "revenue.deliveryAnalysis": "تحليل نوع التسليم",
     "revenue.revenueByStatus": "الإيرادات حسب حالة الطلب",
     "revenue.month": "الشهر",
