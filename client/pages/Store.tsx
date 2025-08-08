@@ -178,7 +178,7 @@ export default function Store() {
                       <span className="text-lg font-bold text-primary auto-text">
                         BD {product.price.toFixed(2)}
                       </span>
-                      {product.totalStock > 0 && (
+                      {product.totalStock && product.totalStock > 0 && (
                         <p className="text-xs text-muted-foreground auto-text">
                           {product.totalStock} {t("products.stock")}
                         </p>
@@ -188,14 +188,14 @@ export default function Store() {
                     <Button
                       size="lg"
                       onClick={() => handleAddToCart(product)}
-                      disabled={product.totalStock === 0}
+                      disabled={!product.totalStock || product.totalStock === 0}
                       className="shrink-0 min-h-[44px] min-w-[44px] p-2"
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
                   </div>
 
-                  {product.totalStock === 0 && (
+                  {(!product.totalStock || product.totalStock === 0) && (
                     <Badge
                       variant="secondary"
                       className="w-full mt-2 justify-center text-center"
