@@ -32,7 +32,7 @@ interface Product {
     name: string;
     stock: number;
   }>;
-  totalStock: number;
+  totalStock?: number;
 }
 
 interface AddToCartDialogProps {
