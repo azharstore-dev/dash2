@@ -47,7 +47,7 @@ export default function CartSidebar({ open, onClose }: CartSidebarProps) {
   return (
     <>
       <Dialog open={open} onOpenChange={onClose}>
-        <DialogContent className="w-[95vw] sm:max-w-lg max-h-[90vh] flex flex-col p-0 rounded-lg sm:rounded-md">
+        <DialogContent className="w-[95vw] sm:max-w-lg max-h-[95vh] flex flex-col p-0 rounded-lg sm:rounded-md overflow-hidden">
           <DialogHeader className="px-6 py-4 border-b">
             <DialogTitle className="flex items-center gap-2 text-xl">
               <ShoppingBag className="h-6 w-6" />
@@ -62,14 +62,14 @@ export default function CartSidebar({ open, onClose }: CartSidebarProps) {
                 <p className="text-muted-foreground text-lg">
                   {t("store.cartEmpty")}
                 </p>
-                <Button variant="outline" onClick={onClose}>
+                <Button variant="outline" onClick={onClose} size="lg" className="min-h-[44px]">
                   {t("store.continueShopping")}
                 </Button>
               </div>
             </div>
           ) : (
             <>
-              <ScrollArea className="flex-1 px-6">
+              <ScrollArea className="flex-1 px-3 sm:px-6 overflow-y-auto">
                 <div className="space-y-4 py-4">
                   {items.map((item) => (
                     <div
@@ -171,7 +171,7 @@ export default function CartSidebar({ open, onClose }: CartSidebarProps) {
                 </div>
               </ScrollArea>
 
-              <DialogFooter className="flex-col space-y-4 px-4 sm:px-6 py-4 border-t">
+              <DialogFooter className="flex-col space-y-4 px-3 sm:px-6 py-4 border-t bg-white sticky bottom-0 shrink-0">
                 {/* Total */}
                 <div className="flex justify-between items-center text-lg sm:text-xl font-bold w-full">
                   <span>{t("store.cartTotal")}:</span>
@@ -185,14 +185,15 @@ export default function CartSidebar({ open, onClose }: CartSidebarProps) {
                   <Button
                     variant="outline"
                     onClick={clearCart}
-                    className="flex-1"
+                    className="flex-1 min-h-[44px]"
                     disabled={items.length === 0}
+                    size="lg"
                   >
                     {t("store.clearCart")}
                   </Button>
                   <Button
                     onClick={handleCheckout}
-                    className="flex-1"
+                    className="flex-1 min-h-[48px]"
                     disabled={items.length === 0}
                     size="lg"
                   >

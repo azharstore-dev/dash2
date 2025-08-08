@@ -27,7 +27,7 @@ interface Product {
     name: string;
     stock: number;
   }>;
-  totalStock: number;
+  totalStock?: number;
 }
 
 export default function Store() {
@@ -90,9 +90,10 @@ export default function Store() {
             {/* Language Switch */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
+                <Button variant="outline" size="lg" className="gap-2 min-h-[44px]">
                   <Globe className="h-4 w-4" />
-                  {language === "ar" ? "العربية" : "English"}
+                  <span className="hidden sm:inline">{language === "ar" ? "العربية" : "English"}</span>
+                  <span className="sm:hidden">{language === "ar" ? "ع" : "EN"}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -109,10 +110,11 @@ export default function Store() {
             <Button
               variant="outline"
               onClick={() => setIsCartOpen(true)}
-              className="relative hover:bg-primary/5 hover:border-primary transition-colors"
+              className="relative hover:bg-primary/5 hover:border-primary transition-colors min-h-[44px]"
+              size="lg"
             >
               <ShoppingCart className="h-5 w-5 [dir=rtl]:ml-2 [dir=ltr]:mr-2" />
-              {t("store.cart")}
+              <span className="hidden sm:inline">{t("store.cart")}</span>
               {cartItemsCount > 0 && (
                 <Badge
                   variant="destructive"
@@ -135,7 +137,7 @@ export default function Store() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {products.map((product) => (
               <div
                 key={product.id}
@@ -176,7 +178,7 @@ export default function Store() {
                       <span className="text-lg font-bold text-primary auto-text">
                         BD {product.price.toFixed(2)}
                       </span>
-                      {product.totalStock > 0 && (
+                      {product.totalStock && product.totalStock > 0 && (
                         <p className="text-xs text-muted-foreground auto-text">
                           {product.totalStock} {t("products.stock")}
                         </p>
@@ -184,16 +186,16 @@ export default function Store() {
                     </div>
 
                     <Button
-                      size="sm"
+                      size="lg"
                       onClick={() => handleAddToCart(product)}
-                      disabled={product.totalStock === 0}
-                      className="shrink-0"
+                      disabled={!product.totalStock || product.totalStock === 0}
+                      className="shrink-0 min-h-[44px] min-w-[44px] p-2"
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
                   </div>
 
-                  {product.totalStock === 0 && (
+                  {(!product.totalStock || product.totalStock === 0) && (
                     <Badge
                       variant="secondary"
                       className="w-full mt-2 justify-center text-center"
