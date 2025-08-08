@@ -149,6 +149,27 @@ const translations = {
     "customers.customerTown": "Town/Area",
     "customers.save": "Save",
 
+    // Analytics
+    "analytics.title": "Analytics",
+    "analytics.overview": "Analytics Overview",
+    "analytics.visitors": "Total Visitors",
+    "analytics.pageViews": "Page Views",
+    "analytics.avgSession": "Avg. Session Duration",
+    "analytics.bounceRate": "Bounce Rate",
+    "analytics.newUsers": "New Customers",
+    "analytics.returningUsers": "Returning Customers",
+    "analytics.visitorTrends": "Visitor Trends",
+    "analytics.deviceBreakdown": "Device Breakdown",
+    "analytics.topPages": "Top Pages",
+    "analytics.views": "Views",
+    "analytics.uniqueViews": "Unique Views",
+    "analytics.minutes": "minutes",
+    "analytics.refresh": "Refresh Data",
+    "analytics.last7days": "Last 7 Days",
+    "analytics.last30days": "Last 30 Days",
+    "analytics.last90days": "Last 90 Days",
+    "analytics.userTypes": "Customer Types",
+
     // Revenue
     "revenue.title": "Revenue Analytics",
     "revenue.overview": "Revenue Overview",
@@ -307,7 +328,7 @@ const translations = {
     "products.delete": "حذف",
     "products.noProducts": "لا توجد منتجات",
     "products.addProduct": "إضافة منتج",
-    "products.editProduct": "تعديل منتج",
+    "products.editProduct": "تعديل منت��",
     "products.productName": "اسم المنتج",
     "products.productPrice": "سعر المنتج",
     "products.productDescription": "وصف ال��نتج",
@@ -402,6 +423,27 @@ const translations = {
     "customers.customerTown": "المنطقة:",
     "customers.save": "حفظ",
 
+    // Analytics
+    "analytics.title": "التحليلات",
+    "analytics.overview": "نظرة عامة على التحليلات",
+    "analytics.visitors": "إجمالي الزوار",
+    "analytics.pageViews": "مشاهدات الصفحة",
+    "analytics.avgSession": "متوسط مدة الجلسة",
+    "analytics.bounceRate": "معدل الارتداد",
+    "analytics.newUsers": "العملاء الجدد",
+    "analytics.returningUsers": "العملاء العائدين",
+    "analytics.visitorTrends": "اتجاهات الزوار",
+    "analytics.deviceBreakdown": "تفصيل الأجهزة",
+    "analytics.topPages": "أهم الصفحات",
+    "analytics.views": "المشاهدات",
+    "analytics.uniqueViews": "المشاهدات الفريدة",
+    "analytics.minutes": "دقائق",
+    "analytics.refresh": "تحديث البيانات",
+    "analytics.last7days": "آخر 7 أيام",
+    "analytics.last30days": "آخر 30 يوم",
+    "analytics.last90days": "آخر 90 يوم",
+    "analytics.userTypes": "أنواع العملاء",
+
     // Revenue
     "revenue.title": "تحليلات الإيرادات",
     "revenue.overview": "نظرة عامة على الإيرادات",
@@ -466,7 +508,7 @@ const translations = {
     // Login
     "login.title": "تسجيل دخول الإدارة",
     "login.password": "كلمة المرور",
-    "login.signIn": "تسجيل الدخول",
+    "login.signIn": "تسجيل ��لدخول",
     "login.invalidPassword": "كلمة مرور غير صحيحة",
 
     // Language
@@ -520,7 +562,7 @@ const translations = {
     "checkout.paymentMethod": "طريقة الدفع",
     "checkout.cashOnDelivery": "الدفع عند التسليم",
     "checkout.free": "مجاني",
-    "checkout.deliveryDescription": "سيتم ��لتوصيل إلى عنوانك",
+    "checkout.deliveryDescription": "سيتم التوصيل إلى عنوانك",
     "checkout.pickupDescription": "الاستلام من المتجر",
 
     // Additional store keys
