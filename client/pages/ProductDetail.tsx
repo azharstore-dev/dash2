@@ -218,12 +218,12 @@ export default function ProductDetail() {
                 BD {product.price.toFixed(2)}
               </div>
 
-              {product.totalStock > 0 ? (
+              {product.totalStock && product.totalStock > 0 ? (
                 <Badge
                   variant="outline"
                   className="text-green-600 border-green-600"
                 >
-                  {product.totalStock} {t("products.stock")}
+                  {product.totalStock || 0} {t("products.stock")}
                 </Badge>
               ) : (
                 <Badge variant="secondary">{t("store.outOfStock")}</Badge>
@@ -257,7 +257,7 @@ export default function ProductDetail() {
             {/* Add to Cart Button */}
             <Button
               onClick={handleAddToCart}
-              disabled={product.totalStock === 0}
+              disabled={!product.totalStock || product.totalStock === 0}
               size="lg"
               className="w-full"
             >
