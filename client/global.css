@@ -434,4 +434,64 @@
   [dir="rtl"] td {
     text-align: right;
   }
+
+  /* Mobile Dialog Improvements */
+  @media (max-width: 768px) {
+    /* Ensure dialogs use full available space on mobile */
+    [data-radix-dialog-content] {
+      width: 95vw !important;
+      max-height: 95vh !important;
+      margin: 2.5vh auto !important;
+    }
+
+    /* Better touch targets for mobile */
+    button,
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Improved spacing for mobile forms */
+    .space-y-4 > * + * {
+      margin-top: 1.5rem;
+    }
+
+    /* Better mobile scroll behavior */
+    [data-radix-scroll-area-viewport] {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Safe area for mobile devices with notches */
+    .safe-area-bottom {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .safe-area-top {
+      padding-top: env(safe-area-inset-top);
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    [data-radix-dialog-content] {
+      max-width: 80vw;
+      max-height: 90vh;
+    }
+  }
+
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Better focus visibility for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring)) !important;
+    outline-offset: 2px !important;
+  }
 }
