@@ -175,7 +175,7 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
   if (orderSuccess) {
     return (
       <Dialog open={open} onOpenChange={handleClose}>
-        <DialogContent className="w-[95vw] sm:max-w-md max-h-[90vh] p-0 rounded-lg sm:rounded-md">
+        <DialogContent className="w-[95vw] sm:max-w-md max-h-[95vh] p-0 rounded-lg sm:rounded-md overflow-hidden flex flex-col">
           <div className="p-6 text-center space-y-6">
             <div className="flex justify-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
@@ -198,7 +198,7 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
                 #{orderNumber}
               </Badge>
             </div>
-            <Button onClick={handleClose} className="w-full" size="lg">
+            <Button onClick={handleClose} className="w-full min-h-[48px]" size="lg">
               {t("common.close")}
             </Button>
           </div>
@@ -209,7 +209,7 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="w-[95vw] sm:max-w-lg max-h-[90vh] p-0 rounded-lg sm:rounded-md">
+      <DialogContent className="w-[95vw] sm:max-w-lg max-h-[95vh] p-0 rounded-lg sm:rounded-md overflow-hidden flex flex-col">
         <div className="flex flex-col h-full auto-text">
           {/* Header */}
           <DialogHeader className="px-4 sm:px-6 py-4 border-b">
@@ -244,7 +244,7 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
             </div>
           </DialogHeader>
 
-          <ScrollArea className="flex-1">
+          <ScrollArea className="flex-1 overflow-y-auto">
             <div className="p-4 sm:p-6">
               {/* Step 1: Customer Information */}
               {step === 1 && (
@@ -564,15 +564,16 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
             </div>
           </ScrollArea>
 
-          {/* Footer with Navigation */}
-          <div className="border-t p-4 sm:p-6">
-            <div className="flex justify-between items-center gap-4">
+          {/* Footer with Navigation - Fixed for mobile */}
+          <div className="border-t p-3 sm:p-6 bg-white sticky bottom-0 shrink-0">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
               {/* Back Button */}
               {step > 1 && (
                 <Button
                   variant="outline"
                   onClick={handleBack}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 justify-center sm:justify-start order-2 sm:order-1"
+                  size="lg"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   {t("common.back")}
@@ -580,12 +581,13 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
               )}
 
               {/* Next/Submit Button */}
-              <div className="flex-1 flex justify-end">
+              <div className={`flex-1 order-1 sm:order-2 ${step <= 1 ? 'w-full' : ''}`}>
                 {step < 3 ? (
                   <Button
                     onClick={handleNext}
                     disabled={step === 1 && !isStep1Valid()}
-                    className="flex items-center gap-2 bg-primary hover:bg-primary/90"
+                    className="w-full flex items-center gap-2 justify-center bg-primary hover:bg-primary/90"
+                    size="lg"
                   >
                     {t("common.next")}
                     <ArrowRight className="w-4 h-4" />
@@ -594,7 +596,7 @@ export default function CheckoutDialog({ open, onClose }: CheckoutDialogProps) {
                   <Button
                     onClick={handlePlaceOrder}
                     disabled={!isFormValid() || isSubmitting}
-                    className="flex items-center gap-2 bg-primary hover:bg-primary/90"
+                    className="w-full flex items-center gap-2 justify-center bg-primary hover:bg-primary/90 min-h-[48px]"
                     size="lg"
                   >
                     <CreditCard className="w-4 h-4" />
