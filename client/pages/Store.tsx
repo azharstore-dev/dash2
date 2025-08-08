@@ -73,12 +73,12 @@ export default function Store() {
           {/* Logo and Title */}
           <div className="flex items-center gap-3 [dir=rtl]:flex-row-reverse">
             <div className="h-20 flex items-center">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/6cb987f4f6054cf88b5f469a13f2a67e/b5f4e8c2a4b64c34a9e5f8e8d3a5b9c2"
-                // Using the new logo provided by user
-                alt={t("store.title")}
-                className="h-20 w-auto object-contain"
-              />
+              <div className="flex items-center gap-2">
+                <StoreIcon className="h-12 w-12 text-primary" />
+                <div className="text-xl font-bold text-primary">
+                  {t("store.title")}
+                </div>
+              </div>
             </div>
           </div>
 
