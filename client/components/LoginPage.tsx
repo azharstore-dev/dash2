@@ -60,7 +60,7 @@ export default function LoginPage() {
                   : "https://cdn.builder.io/api/v1/image/assets%2F82efd381682b4c5f90191340367e0cd7%2F72cfed7b1096405dbe2a7a56980b2907?format=webp&width=800"
                 }
                 alt="Azhar Store Logo"
-                className="h-32 w-auto mx-auto max-w-[300px] object-contain"
+className="h-40 w-auto mx-auto max-w-[400px] object-contain"
               />
             </div>
 
