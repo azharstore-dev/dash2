@@ -310,7 +310,7 @@ const translations = {
     "products.editProduct": "تعديل منتج",
     "products.productName": "اسم المنتج",
     "products.productPrice": "سعر المنتج",
-    "products.productDescription": "وصف المنتج",
+    "products.productDescription": "وصف ال��نتج",
     "products.productImages": "صور المنتج",
     "products.addVariant": "إضافة نوع",
     "products.variantName": "اسم النوع",
@@ -450,11 +450,11 @@ const translations = {
     "empty.createOrder": "إنشاء طلب",
 
     // Messages
-    "message.deleteConfirm": "هل أنت متأكد م�� حذف هذا العنصر؟",
+    "message.deleteConfirm": "هل أنت متأكد من حذف هذا العنصر؟",
     "message.productAdded": "تم إضافة المنتج بنجاح",
     "message.productUpdated": "تم تحديث المنتج بنجاح",
     "message.productDeleted": "تم حذف المنتج بنجاح",
-    "message.orderAdded": "تم إضافة الطلب بن��اح",
+    "message.orderAdded": "تم إضافة الطلب بنجاح",
     "message.orderUpdated": "تم تحديث الطلب بنجاح",
     "message.orderDeleted": "تم حذف الطلب بنجاح",
     "message.customerAdded": "تم إضافة العميل بنجاح",
@@ -521,7 +521,7 @@ const translations = {
     "checkout.cashOnDelivery": "الدفع عند التسليم",
     "checkout.free": "مجاني",
     "checkout.deliveryDescription": "سيتم التوصيل إلى عنوانك",
-    "checkout.pickupDescription": "الاستلام من المتجر",
+    "checkout.pickupDescription": "الاستلام ��ن المتجر",
 
     // Additional store keys
     "store.outOfStock": "نفد المخزون",
