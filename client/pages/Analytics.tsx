@@ -234,10 +234,10 @@ const Analytics = () => {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-dashboard-primary auto-text">
-            {currentTranslations.title}
+{getTranslation('analytics.title', 'Analytics', 'التحليلات')}
           </h1>
           <p className="text-muted-foreground auto-text">
-            {currentTranslations.overview}
+{getTranslation('analytics.overview', 'Analytics Overview', 'نظرة عامة على التحليلات')}
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -246,14 +246,14 @@ const Analytics = () => {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="7days">{currentTranslations.last7days}</SelectItem>
-              <SelectItem value="30days">{currentTranslations.last30days}</SelectItem>
-              <SelectItem value="90days">{currentTranslations.last90days}</SelectItem>
+<SelectItem value="7days">{getTranslation('analytics.last7days', 'Last 7 Days', 'آخر 7 أيام')}</SelectItem>
+              <SelectItem value="30days">{getTranslation('analytics.last30days', 'Last 30 Days', 'آخر 30 يوم')}</SelectItem>
+              <SelectItem value="90days">{getTranslation('analytics.last90days', 'Last 90 Days', 'آخر 90 يوم')}</SelectItem>
             </SelectContent>
           </Select>
           <Button onClick={refreshData} variant="outline" size="sm">
             <RefreshCw className="w-4 h-4 mr-2" />
-            {currentTranslations.refresh}
+{getTranslation('analytics.refresh', 'Refresh Data', 'تحديث البيانات')}
           </Button>
         </div>
       </div>
@@ -263,7 +263,7 @@ const Analytics = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium auto-text">
-              {currentTranslations.visitors}
+{getTranslation('analytics.visitors', 'Total Visitors', 'إجمالي الزوار')}
             </CardTitle>
             <Users className="h-4 w-4 text-dashboard-primary" />
           </CardHeader>
@@ -281,7 +281,7 @@ const Analytics = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium auto-text">
-              {currentTranslations.pageViews}
+{getTranslation('analytics.pageViews', 'Page Views', 'مشاهدات الصفحة')}
             </CardTitle>
             <Eye className="h-4 w-4 text-dashboard-primary" />
           </CardHeader>
@@ -299,7 +299,7 @@ const Analytics = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium auto-text">
-              {currentTranslations.avgSession}
+{getTranslation('analytics.avgSession', 'Avg. Session Duration', 'متوسط مدة الجلسة')}
             </CardTitle>
             <Clock className="h-4 w-4 text-dashboard-primary" />
           </CardHeader>
@@ -308,7 +308,7 @@ const Analytics = () => {
               {Math.floor(analyticsData.averageSessionDuration / 60)}:{(analyticsData.averageSessionDuration % 60).toString().padStart(2, '0')}
             </div>
             <p className="text-xs text-muted-foreground auto-text">
-              {currentTranslations.minutes}
+{getTranslation('analytics.minutes', 'minutes', 'دقائق')}
             </p>
           </CardContent>
         </Card>
@@ -316,7 +316,7 @@ const Analytics = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium auto-text">
-              {currentTranslations.bounceRate}
+{getTranslation('analytics.bounceRate', 'Bounce Rate', 'معدل الارتداد')}
             </CardTitle>
             <MousePointer className="h-4 w-4 text-dashboard-primary" />
           </CardHeader>
@@ -336,7 +336,7 @@ const Analytics = () => {
         {/* Visitor Trends Chart */}
         <Card>
           <CardHeader>
-            <CardTitle className="auto-text">{currentTranslations.visitorTrends}</CardTitle>
+<CardTitle className="auto-text">{getTranslation('analytics.visitorTrends', 'Visitor Trends', 'اتجاهات الزوار')}</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>
@@ -356,14 +356,14 @@ const Analytics = () => {
                   dataKey="visitors" 
                   stroke="#742370" 
                   strokeWidth={2} 
-                  name={currentTranslations.visitors}
+name={getTranslation('analytics.visitors', 'Visitors', 'الزوار')}
                 />
                 <Line 
                   type="monotone" 
                   dataKey="pageViews" 
                   stroke="#8b4d89" 
                   strokeWidth={2} 
-                  name={currentTranslations.pageViews}
+name={getTranslation('analytics.pageViews', 'Page Views', 'مشاهدات الصفحة')}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -373,7 +373,7 @@ const Analytics = () => {
         {/* Device Breakdown */}
         <Card>
           <CardHeader>
-            <CardTitle className="auto-text">{currentTranslations.deviceBreakdown}</CardTitle>
+<CardTitle className="auto-text">{getTranslation('analytics.deviceBreakdown', 'Device Breakdown', 'تفصيل الأجهزة')}</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>
@@ -404,14 +404,14 @@ const Analytics = () => {
         {/* User Types */}
         <Card>
           <CardHeader>
-            <CardTitle className="auto-text">{currentTranslations.userTypes}</CardTitle>
+<CardTitle className="auto-text">{getTranslation('analytics.userTypes', 'Customer Types', 'أنواع العملاء')}</CardTitle>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={250}>
               <BarChart
                 data={[
-                  { type: currentTranslations.newUsers, count: analyticsData.newUsers },
-                  { type: currentTranslations.returningUsers, count: analyticsData.returningUsers },
+{ type: getTranslation('analytics.newUsers', 'New Customers', 'العملاء الجدد'), count: analyticsData.newUsers },
+                  { type: getTranslation('analytics.returningUsers', 'Returning Customers', 'العملاء العائدين'), count: analyticsData.returningUsers },
                 ]}
               >
                 <CartesianGrid strokeDasharray="3 3" />
@@ -427,7 +427,7 @@ const Analytics = () => {
         {/* Top Pages */}
         <Card>
           <CardHeader>
-            <CardTitle className="auto-text">{currentTranslations.topPages}</CardTitle>
+<CardTitle className="auto-text">{getTranslation('analytics.topPages', 'Top Pages', 'أهم الصفحات')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -440,7 +440,7 @@ const Analytics = () => {
                     <div>
                       <p className="font-medium auto-text">{page.page}</p>
                       <p className="text-sm text-muted-foreground auto-text">
-                        {page.uniqueViews.toLocaleString()} {currentTranslations.uniqueViews}
+{page.uniqueViews.toLocaleString()} {getTranslation('analytics.uniqueViews', 'Unique Views', 'المشاهدات الفريدة')}
                       </p>
                     </div>
                   </div>
@@ -449,7 +449,7 @@ const Analytics = () => {
                       {page.views.toLocaleString()}
                     </p>
                     <p className="text-xs text-muted-foreground auto-text">
-                      {currentTranslations.views}
+{getTranslation('analytics.views', 'Views', 'المشاهدات')}
                     </p>
                   </div>
                 </div>
