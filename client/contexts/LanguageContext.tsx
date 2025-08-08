@@ -515,13 +515,13 @@ const translations = {
     "checkout.orderSuccessMessage": "شكراً لك على طلبك",
     "checkout.subtotal": "المجموع الفرعي",
     "checkout.deliveryFee": "رسوم التوصيل",
-    "checkout.total": "المجموع ا��كلي",
+    "checkout.total": "المجموع الكلي",
     "checkout.orderItems": "محتويات الطلب",
     "checkout.paymentMethod": "طريقة الدفع",
     "checkout.cashOnDelivery": "الدفع عند التسليم",
     "checkout.free": "مجاني",
-    "checkout.deliveryDescription": "سيتم التوصيل إلى عنوانك",
-    "checkout.pickupDescription": "الاستلام ��ن المتجر",
+    "checkout.deliveryDescription": "سيتم ��لتوصيل إلى عنوانك",
+    "checkout.pickupDescription": "الاستلام من المتجر",
 
     // Additional store keys
     "store.outOfStock": "نفد المخزون",
