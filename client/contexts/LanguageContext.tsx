@@ -328,10 +328,10 @@ const translations = {
     "products.delete": "حذف",
     "products.noProducts": "لا توجد منتجات",
     "products.addProduct": "إضافة منتج",
-    "products.editProduct": "تعديل منت��",
+    "products.editProduct": "تعديل منتج",
     "products.productName": "اسم المنتج",
     "products.productPrice": "سعر المنتج",
-    "products.productDescription": "وصف ال��نتج",
+    "products.productDescription": "وصف المنتج",
     "products.productImages": "صور المنتج",
     "products.addVariant": "إضافة نوع",
     "products.variantName": "اسم النوع",
@@ -429,7 +429,7 @@ const translations = {
     "analytics.visitors": "إجمالي الزوار",
     "analytics.pageViews": "مشاهدات الصفحة",
     "analytics.avgSession": "متوسط مدة الجلسة",
-    "analytics.bounceRate": "معدل الارتداد",
+    "analytics.bounceRate": "��عدل الارتداد",
     "analytics.newUsers": "العملاء الجدد",
     "analytics.returningUsers": "العملاء العائدين",
     "analytics.visitorTrends": "اتجاهات الزوار",
@@ -508,7 +508,7 @@ const translations = {
     // Login
     "login.title": "تسجيل دخول الإدارة",
     "login.password": "كلمة المرور",
-    "login.signIn": "تسجيل ��لدخول",
+    "login.signIn": "تسجيل الدخول",
     "login.invalidPassword": "كلمة مرور غير صحيحة",
 
     // Language
